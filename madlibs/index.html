@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -7,7 +7,7 @@
     <script src="script.js"></script>
   </head>
   
-</body ng-app="myApp" ng-strict-di>
+</body>
   <header class="masthead">
     <section>
       <img src="resources\smily_face.png">
@@ -22,16 +22,15 @@
           Please enter following Info
         </h1>
         <form name="myForm" ng-controller="ExampleController">
-          Female name: <input type="text" name="FemaleName" value="Female name"><br>
-          Job title: <input type="text" name="JobTitle" value="Job Title"><br>
-          <input type="submit" value="Submit">
+          Female name: <input type="text" ng-model = "female_name.text" name="FemaleName" value="Female name"><br>
+          Job title: <input type="text" ng-model = "job_title.text" name="JobTitle" value="Job Title"><br>
+          <button  ng-click="set('foo')">Submit</button>
          </form>
-
       </div>
     
       <div>
         <p>
-        {{female_name.text}} was a {{job_title}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious task}} and {{dirty task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so she studied programming instead.  
+        {{ female_name.text }} was a {{ job_title.text }} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious task}} and {{dirty task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so she studied programming instead.  
         What a great decision! With her new skills, {{female_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celbertity}} that not only loved {{dirty task}} but did it {{huge_number}} faster. 
         </p>
       </div>

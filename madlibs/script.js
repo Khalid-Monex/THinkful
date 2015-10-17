@@ -2,16 +2,11 @@
 angular.module('myApp', [])
 .controller('oneController', function($scope) 
 {
-  $scope.female_name = {
-    text: 'Female Name'
-  };
+  $scope.female_name = { text: 'fn' };
+  $scope.job_title = { text: 'jt' };
   
-  $scope.job_title = 'Job Titile';
-  $scope.tedious_task = "Tedious Task";
-  $scope.dirty_task = "Dirty Task";
-  $scope.celebrity = "Celebrity";
-  $scope.useless_skill = "Useful Skill";
-  $scope.adjective = "Adjective";
-  $scope.obnoxiuous_celbertity = "obnoxiuous_celbertity";
-  $scope.huge_number = "huge_number";
+  $scope.set = function(name, title) {
+            $scope.female_name.text = name;
+            $scope.job_title.text = title;
+        }
 });
